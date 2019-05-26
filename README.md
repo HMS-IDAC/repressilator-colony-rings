@@ -1,6 +1,6 @@
 # READ-ME
 
-The code in this repository can be used to reproduce the “Repressilator-based Inference of Growth at a Single-cell level” as detailed in Riglar et al, “Bacterial variability in the mammalian gut captured by a single-cell synthetic oscillator” (currently under review and released as a preprint doi: https://www.biorxiv.org/content/10.1101/472720v1). 
+The code in this repository can be used to reproduce the “Repressilator-based inference of growth at a single-cell level” as detailed in Riglar et al, “Bacterial variability in the mammalian gut captured by a single-cell synthetic oscillator” (currently under review and released as a preprint doi: https://www.biorxiv.org/content/10.1101/472720v1). 
 
 ## Getting Started
 
@@ -30,16 +30,20 @@ The code loops over all subfolders, loads the paired YFP and CFP images, and cal
 
 Image data is in the form of single fluorescent jpg images of individual bacterial colonies, centered upon the colony. For this study, colonies were identified and exported as 200x200 pixel images from macroscope images of agar plates using FIJI (ImageJ).
 
-Notes: This function is hard-coded to expect a certain directory structure. Please abide by the following rules
-*	The plate names cannot contain ‘.’ or ‘-‘
-*	The code expects that for every YFP image there is a corresponding CFP image, and the file names differ only by replacing ‘YFP’ with ‘CFP’
+Notes:
 
-The method outputs a csv file with all fitted theta_0 values for CFP, organized by folders. Theta_0_YFP is theta_0_CFP + colorPhaseShift (see below).  The csv file is saved within the folder chosen at the prompt at the completion of the script. 
+1. This function is hard-coded to expect a certain directory structure. Please abide by the following rules:
+    a. The plate names cannot contain ‘.’ or ‘-‘
+    b. The code expects that for every YFP image there is a corresponding CFP image, and the file names differ only by replacing ‘YFP’ with ‘CFP’
 
-A simple visualization of the datapoints [0:2 \pi ], y-axis, arranged by timepoint, x-axis is also returned.
+2. The method outputs a csv file with all fitted theta_0 values for CFP, organized by folders.  Theta_0_YFP can be calculated as follows: theta_0_YFP = theta_0_CFP + colorPhaseShift.
+
+3. The csv file is saved within the folder chosen at the prompt at the completion of the script. 
+
+4. A simple visualization of the datapoints [0:2 $\pi$ ], y-axis, arranged by timepoint, x-axis is also returned.
 
 _Default parameters for E. coli MC4100 (eg LPT320)_ 
-`Riglar_RINGS_run()` or `Riglar_RINGS_run(‘rMax’, 1.3, ‘expectedSlope’, 0.39, ‘slopeTol’, 0.3, ‘colorPhaseShift’, 1.5)`
+```Riglar_RINGS_run()``` or ```Riglar_RINGS_run(‘rMax’, 1.3, ‘expectedSlope’, 0.39, ‘slopeTol’, 0.3, ‘colorPhaseShift’, 1.5)```
 
 _Default parameters for E. coli MG1655 (eg. PAS715)_ 
 `Riglar_RINGS_run(‘rMax’, 1.3, ‘expectedSlope’, 0.34, ‘slopeTol’, 0.4, ‘colorPhaseShift’, 0.9)`
