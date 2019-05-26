@@ -43,8 +43,7 @@ Notes:
 Default Parameters:
 
 1. _Default parameters for E. coli MC4100 (eg LPT320)_  
-```Riglar_RINGS_run()```  
-or  
+```Riglar_RINGS_run()``` or  
 ```Riglar_RINGS_run(‘rMax’, 1.3, ‘expectedSlope’, 0.39, ‘slopeTol’, 0.3, ‘colorPhaseShift’, 1.5)```
 
 2. _Default parameters for E. coli MG1655 (eg. PAS715)_  
@@ -72,7 +71,7 @@ The standard usage is to call this function through Riglar_RINGS_run.m, but you 
 Default Parameters:
 
 1. ```Riglar_RINGS_fit(im, ‘rMax’, 1.3, ‘expectedSlope’, 0.39, ‘slopeTol’, 0.3, ‘colorPhaseShift’, 1.5)```  
-The first parameter (im) is the 2 color image, with shape: height x width x 2.
+The first parameter (im) is the 2 color image, with shape: height *x* width *x* 2.
 
 ### Visualization
 
