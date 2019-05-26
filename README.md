@@ -42,15 +42,15 @@ Notes:
 
 Default Parameters:
 
-1. _Default parameters for E. coli MC4100 (eg LPT320)_ 
-```Riglar_RINGS_run()```
-or
+1. _Default parameters for E. coli MC4100 (eg LPT320)_  
+```Riglar_RINGS_run()```  
+or  
 ```Riglar_RINGS_run(‘rMax’, 1.3, ‘expectedSlope’, 0.39, ‘slopeTol’, 0.3, ‘colorPhaseShift’, 1.5)```
 
-2. _Default parameters for E. coli MG1655 (eg. PAS715)_ 
+2. _Default parameters for E. coli MG1655 (eg. PAS715)_  
 ```Riglar_RINGS_run(‘rMax’, 1.3, ‘expectedSlope’, 0.34, ‘slopeTol’, 0.4, ‘colorPhaseShift’, 0.9)```
 
-3. _Default parameters for S. Typhimurium (eg. PAS716)_ 
+3. _Default parameters for S. Typhimurium (eg. PAS716)_  
 ```Riglar_RINGS_run(‘rMax’, 1.1, ‘expectedSlope’, 0.43, ‘slopeTol’, 0.4, ‘colorPhaseShift’, 1.0)```
 
 **Riglar_RINGS_fit.m**
@@ -71,7 +71,8 @@ The standard usage is to call this function through Riglar_RINGS_run.m, but you 
 
 Default Parameters:
 
-1. ```Riglar_RINGS_fit(im, ‘rMax’, 1.3, ‘expectedSlope’, 0.39, ‘slopeTol’, 0.3, ‘colorPhaseShift’, 1.5)```  The first parameter (im) is the 2 color image, with shape: height x width x 2.
+1. ```Riglar_RINGS_fit(im, ‘rMax’, 1.3, ‘expectedSlope’, 0.39, ‘slopeTol’, 0.3, ‘colorPhaseShift’, 1.5)```  
+The first parameter (im) is the 2 color image, with shape: height x width x 2.
 
 ### Visualization
 
@@ -98,10 +99,11 @@ At the final prompt, the desired save directory for the csv output (theta_0.csv)
 
 Notes:
 
-1. Alternative parameters can be passed to Riglar_RINGS_fit using the construction eg. 
+1. Alternative parameters can be passed to Riglar_RINGS_fit using the construction  
 ```Riglar_RINGS_run(‘rMax’, 1.3, ‘expectedSlope’, 0.39, ‘slopeTol’, 0.3, ‘colorPhaseShift’, 1.5)```
 
-2. Fits can be inspected by setting ‘plotFlag’ to 1 (ie. ```Riglar_RINGS_run(‘plotFlag’, 1)```)
+2. Fits can be inspected by setting ‘plotFlag’ to 1  
+```Riglar_RINGS_run(‘plotFlag’, 1)```
 
 3. Included in the LPT320_t02h timepoint is an example of a failed fit (File 2h_LPT320_2_h_1-636265086740000720-YFP.jpg5). This datapoint will return a NaN value in the csv output file. 
 
