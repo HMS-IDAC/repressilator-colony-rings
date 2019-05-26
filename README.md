@@ -1,6 +1,6 @@
 # READ-ME
 
-The code in this repository can be used to reproduce the “Repressilator-based Inference of Growth at a Single-cell level” as detailed in Riglar et al, “Bacterial variability in the mammalian gut captured by a single-cell synthetic oscillator” (currently under review and released as a preprint doi: https://doi.org/10.1101/472720). 
+The code in this repository can be used to reproduce the “Repressilator-based Inference of Growth at a Single-cell level” as detailed in Riglar et al, “Bacterial variability in the mammalian gut captured by a single-cell synthetic oscillator” (currently under review and released as a preprint doi: https://www.biorxiv.org/content/10.1101/472720v1). 
 
 ## Getting Started
 
