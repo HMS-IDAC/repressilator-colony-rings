@@ -73,7 +73,7 @@ Default Parameters:
 
 1. ```Riglar_RINGS_fit(im, ‘rMax’, 1.3, ‘expectedSlope’, 0.39, ‘slopeTol’, 0.3, ‘colorPhaseShift’, 1.5)```  The first parameter (im) is the 2 color image, with shape: height x width x 2.
 
-### Visualization of Potential Failure Modes
+### Visualization
 
 Example successful fit visualization for (top) YFP and (bottom) CFP.  (Left) normalized image, (middle) model fit and (right) residual.
 
@@ -86,55 +86,42 @@ Example unsuccessful fit visualization for (top) YFP and (bottom) CFP.  (Left) n
 
 ### Test Cases
 
-A small example dataset in provided in the folder ‘Demo_data’, comprising a subset of images (The first 20 of each dataset) of E. coli MC4100 repressilator bacteria (LPT320) from 3 timepoints (2h, 4h, 6h) of the timecourse displayed in full in Figure 1 F-H. 
+A small example dataset in provided in the folder [sample-data](https://github.com/HMS-IDAC/repressilator-colony-rings/tree/master/sample-data), comprising the first 20 images of each dataset of E. coli MC4100 repressilator bacteria (LPT320), from 3 points (2h, 4h, 6h) of the time course displayed in Figure 1 F-H. 
 
-The script can be run using the LPT320 default values, through the MATLAB command window using:
+The script can be run through the MATLAB command window, using the LPT320 default values, as follows:
 
-`Riglar_RINGS_run`
+```Riglar_RINGS_run```
 
-At the first prompt, the data folder (Demo_data) is selected
+At the first prompt, the data folder (sample-data) is selected.
 
 At the final prompt, the desired save directory for the csv output (theta_0.csv) is selected.
 
 Notes:
 
-*	Alternative parameters can be passed to Riglar_RINGS_fit using the construction eg. 
-Riglar_RINGS_run(‘rMax’, 1.3, ‘expectedSlope’, 0.39, ‘slopeTol’, 0.3, ‘colorPhaseShift’, 1.5)
+1. Alternative parameters can be passed to Riglar_RINGS_fit using the construction eg. 
+```Riglar_RINGS_run(‘rMax’, 1.3, ‘expectedSlope’, 0.39, ‘slopeTol’, 0.3, ‘colorPhaseShift’, 1.5)```
 
-*	Fits can be inspected by setting ‘plotFlag’ to 1 (ie. Riglar_RINGS_run(‘plotFlag’, 1)
+2. Fits can be inspected by setting ‘plotFlag’ to 1 (ie. ```Riglar_RINGS_run(‘plotFlag’, 1)```)
 
-*	Included in the LPT320_t02h timepoint is an example of a failed fit (File 2h_LPT320_2_h_1-636265086740000720-YFP.jpg5). This datapoint will return a NaN value in the csv output file. 
-
+3. Included in the LPT320_t02h timepoint is an example of a failed fit (File 2h_LPT320_2_h_1-636265086740000720-YFP.jpg5). This datapoint will return a NaN value in the csv output file. 
 
 Expected outputs:
 
-*	On screen, visualization of datapoints fitted. 
-*	On screen (if plotFlag = 1), figures showing normalized data, model fit and residuals. 1 per datapoint fit. 
-*	Saved at prompt, a csv file with all fit theta_0 values arranged in columns by timepoint
+1. On screen, visualization of datapoints fitted. 
+2. On screen (if plotFlag = 1), figures showing normalized data, model fit and residuals. 1 per datapoint fit. 
+3. Saved at prompt, a csv file with all fit theta_0 values arranged in columns by timepoint
 
 Expected runtime on standard desktop:
 
-<10 seconds (with ‘plotFlag’ = 0) , <1 min (with ‘plotFlag’ = 1). 
-
-
-## Contributing
-
-```
-TODO: add doc with policy for contributing
-```
+< 10 seconds (with ‘plotFlag’ = 0)
+< 1 min (with ‘plotFlag’ = 1)
 
 ## Authors
 
 ```
-List full author list of paper?
+David T Riglar, David L Richmond, Laurent Potvin-Trottier, Andrew A Verdegaal, Alexander D Naydich, Somenath Bakshi, Emanuele Leoncini, Johan Paulsson, Pamela A Silver
 ```
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
-
-## Acknowledgments
-
-```
-TBD
-```
