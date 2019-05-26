@@ -113,7 +113,7 @@ Expected outputs:
 
 Expected runtime on standard desktop:
 
-< 10 seconds (with ‘plotFlag’ = 0)
+< 10 seconds (with ‘plotFlag’ = 0)  
 < 1 min (with ‘plotFlag’ = 1)
 
 ## Authors
