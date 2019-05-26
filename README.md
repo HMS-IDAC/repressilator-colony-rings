@@ -44,15 +44,15 @@ Notes:
 
 Default Parameters:
 
-_Default parameters for E. coli MC4100 (eg LPT320)_ 
+1. _Default parameters for E. coli MC4100 (eg LPT320)_ 
 ```Riglar_RINGS_run()```
 or
 ```Riglar_RINGS_run(‘rMax’, 1.3, ‘expectedSlope’, 0.39, ‘slopeTol’, 0.3, ‘colorPhaseShift’, 1.5)```
 
-_Default parameters for E. coli MG1655 (eg. PAS715)_ 
+2. _Default parameters for E. coli MG1655 (eg. PAS715)_ 
 ```Riglar_RINGS_run(‘rMax’, 1.3, ‘expectedSlope’, 0.34, ‘slopeTol’, 0.4, ‘colorPhaseShift’, 0.9)```
 
-_Default parameters for S. Typhimurium (eg. PAS716)_ 
+3. _Default parameters for S. Typhimurium (eg. PAS716)_ 
 ```Riglar_RINGS_run(‘rMax’, 1.1, ‘expectedSlope’, 0.43, ‘slopeTol’, 0.4, ‘colorPhaseShift’, 1.0)```
 
 **Riglar_RINGS_fit.m**
