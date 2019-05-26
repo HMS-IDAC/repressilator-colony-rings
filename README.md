@@ -32,15 +32,13 @@ Image data is in the form of single fluorescent jpg images of individual bacteri
 
 Notes:
 
-1. This function is hard-coded to expect a certain directory structure. Please abide by the following rules:
-    a. The plate names cannot contain ‘.’ or ‘-‘
-    b. The code expects that for every YFP image there is a corresponding CFP image, and the file names differ only by replacing ‘YFP’ with ‘CFP’
+1. This function is hard-coded to expect a certain directory structure. Please abide by the following rules: **(i)** The plate names cannot contain ‘.’ or ‘-‘.  **(ii)** The code expects that for every YFP image there is a corresponding CFP image, and the file names differ only by replacing ‘YFP’ with ‘CFP’
 
 2. The method outputs a csv file with all fitted theta_0 values for CFP, organized by folders.  Theta_0_YFP can be calculated as follows: theta_0_YFP = theta_0_CFP + colorPhaseShift.
 
 3. The csv file is saved within the folder chosen at the prompt at the completion of the script. 
 
-4. A simple visualization of the datapoints [0:2 $\pi$ ], y-axis, arranged by timepoint, x-axis is also returned.
+4. A simple visualization of the datapoints [0:2pi], y-axis, arranged by timepoint, x-axis is also returned.
 
 Default Parameters:
 
@@ -67,12 +65,13 @@ There are 4 self-identified failure modes.
 
 The primary failure mode seems to be due to strong ‘arcs’ in the raw data that the model fits, but which are discontinuous. The model then spans different bright arcs with different rings, often leading to an offset in xy, and the wrong slope. 
 
-Set plotFlag = 1 to visualize the fit output. This creates and opens an image for each datapoint, so should be used cautiously on large datasets. 
+Set plotFlag = 1 to visualize the fit output. This creates and opens an image for each datapoint, so should be used with caution on large datasets. 
 
 The standard usage is to call this function through Riglar_RINGS_run.m, but you can also call it directly by passing it an image, and additional parameters as name-value pairs. Arguments can be given to Riglar_RINGS_run and will be passed through to Riglar_RINGS_fit. For a list of arguments, see argument parsing in Riglar_RINGS_fit.m.
 
-`Riglar_RINGS_fit(im, ‘rMax’, 1.3, ‘expectedSlope’, 0.39, ‘slopeTol’, 0.3, ‘colorPhaseShift’, 1.5)`
-Note - “im” is the 2 color image, with size: height x width x 2.
+Default Parameters:
+
+1. ```Riglar_RINGS_fit(im, ‘rMax’, 1.3, ‘expectedSlope’, 0.39, ‘slopeTol’, 0.3, ‘colorPhaseShift’, 1.5)```  The first parameter (im) is the 2 color image, with shape: height x width x 2.
 
 ### Visualization of Potential Failure Modes
 
