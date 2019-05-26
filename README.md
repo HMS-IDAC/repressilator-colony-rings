@@ -58,12 +58,12 @@ or
 This code is the workhorse that does the model fitting, and evaluates whether or not the fit parameters are outside an acceptable range. 
 
 There are 4 self-identified failure modes.
-* 'center of colony too far from center of image'
-* 'slope is not within tolerance'
-* 'uncertainty in fitted slope is not within tolerance'
-* 'cfp and yfp amplitude have opposite sign.  fit is unrealiable'
+1. 'center of colony too far from center of image'
+2. 'slope is not within tolerance'
+3. 'uncertainty in fitted slope is not within tolerance'
+4. 'cfp and yfp amplitude have opposite sign.  fit is unrealiable'
 
-The primary failure mode seems to be due to strong ‘arcs’ in the raw data that the model fits, but which are discontinuous. The model then spans different bright arcs with different rings, often leading to an offset in xy, and the wrong slope. 
+The primary failure mode seems to be due to strong arcs in the raw data that the model fits, but which are discontinuous. The model then spans different bright arcs with different rings, often leading to an offset in xy, and the wrong slope. 
 
 Set plotFlag = 1 to visualize the fit output. This creates and opens an image for each datapoint, so should be used with caution on large datasets. 
 
