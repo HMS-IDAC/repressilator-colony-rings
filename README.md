@@ -8,11 +8,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-MATLAB v2017a or later (may work on previous versions of MATLAB, but has not been tested by the authors).
-
 ```
-Todo: provide a list of toolboxes that are required to run the scripts:
-https://in.mathworks.com/help/matlab/ref/matlab.codetools.requiredfilesandproducts.html
+MATLAB v9.4
+Optimization Toolbox v8.1
+Statistics and Machine Learning Toolbox v11.3
 ```
 
 ### Installing
